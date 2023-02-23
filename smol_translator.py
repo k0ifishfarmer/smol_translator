@@ -5,6 +5,7 @@ from collections import defaultdict
 # Create the dictionary of replacements
 # Each key is paired with a list containing every translation option
 replacements = defaultdict(lambda: [], {
+    "the": ["le","ze"],
     "lol": ["kek"],
     "lmao": ["lmeow"],
     "small": ["smol"],
@@ -24,7 +25,6 @@ replacements = defaultdict(lambda: [], {
     "human": ["hooman"],
     "old": ["boomer"],
     "older": ["boomer"],
-    "the": ["le","ze"],
     "up": ["up only"],
     "computer": ["compooter"],
     "oh": ["o"],
