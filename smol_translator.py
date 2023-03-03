@@ -53,10 +53,8 @@ def translate():
     
     # Initialize an empty list for the translated words
     translated = []
-    #print(phrases)
     # Translate each phrase in each sentence
     for sentence in phrases:
-        #print (sentence[-1])
         for phrase in sentence:
             words = phrase.split()
             for word in words:
