@@ -39,6 +39,7 @@ replacements = defaultdict(lambda: [], {
     "something": ["smthn"],
     "personally": ["pawsonally"],
     "chocolate": ["choklet"],
+    "bubble": ["booble"],
     
 })
 
