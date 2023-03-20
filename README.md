@@ -8,7 +8,7 @@ Additionally, I would appreciate any help in optimizing the code and finding any
 
 Thank you for your contributions and help in making this project better!
 
-This code:
+# This code:
   1. Uses the **`input()`** function to prompt the user to enter some text to translate, and then stores that text as a string in the **`text`** variable.
   2. Uses regular expressions to split the input text into a list of sentences and then split each sentence into a list of phrases.
   3. Initializes an empty list called **`translated`**.
