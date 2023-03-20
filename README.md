@@ -2,7 +2,7 @@
 This is a simple text translation program that takes input text and translates it into smol.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-Help Wanted
+# Help Wanted
 I am looking for help to improve the translation dictionary used by the script. If you are proficient in smol, please feel free to contribute by adding new translations or improving existing ones.
 
 Additionally, I would appreciate any help in optimizing the code and finding any potential issues that could cause errors or inconsistencies in the translations. If you find any bugs or have suggestions for improving the code, please open an issue or submit a pull request.
