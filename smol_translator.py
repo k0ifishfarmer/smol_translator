@@ -54,35 +54,42 @@ def translate():
     
     # Initialize an empty list for the translated words
     translated = []
+    
     # Translate each phrase in each sentence
     for sentence in phrases:
         for phrase in sentence:
             words = phrase.split()
-            for word in words:
-                # Lowercase the word if it starts with an uppercase letter
-                #if word[0].isupper():
+            for i, word in enumerate(words):
+                # Lowercase the word
                 word = word.lower()
                 # Look up the replacement for the word and append it to the list of translated words
-                if word in replacements :
+                if word in replacements:
                     replacement_options = replacements[word]
                     replacement = random.choice(replacement_options) 
                     # Sometimes there are multiple options for the same word
                     translated.append(replacement)
-                elif word[:-1] in replacements :
+                elif word[:-1] in replacements:
                     # avoids redundancy for plural words in dictionary
                     replacement_options = replacements[word[:-1]]
                     replacement = random.choice(replacement_options) 
-                    translated.append(replacement+word[-1])
-                # Edge case for last word of the sentence -> has a punctuation and can be plural   
-                elif word == words[-1] and word[:-2] in replacements :
-                    replacement_options = replacements[word[:-2]]
-                    replacement = random.choice(replacement_options) 
-                    translated.append(replacement+word[-2]+word[-1])
-                # If not, just append the original word to the list of translated words
+                    translated.append(replacement + word[-1])
+                elif i == len(words) - 1 and word[-1] in ['.', ',', '!', '?']:
+                    # Edge case for last word of the sentence -> has a punctuation
+                    word_without_punct = word[:-1]
+                    if word_without_punct in replacements:
+                        replacement_options = replacements[word_without_punct]
+                        replacement = random.choice(replacement_options) 
+                        translated.append(replacement + word[-1])
+                    elif word_without_punct[:-1] in replacements:
+                        # avoids redundancy for plural words in dictionary
+                        replacement_options = replacements[word_without_punct[:-1]]
+                        replacement = random.choice(replacement_options) 
+                        translated.append(replacement + word_without_punct[-1] + word[-1])
+                    else:
+                        translated.append(word)
                 else:
                     translated.append(word)
     
     return "\n" + " ".join(translated)
 
 print(translate())
-
