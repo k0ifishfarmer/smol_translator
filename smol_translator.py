@@ -103,6 +103,11 @@ def translate():
             for i, word in enumerate(words):
                 # Lowercase the word
                 word = word.lower()
+                # Remove the "g" from words ending in "ing"
+                if word.endswith('ing'):
+                    # With a probability of 50%, remove the "g" from the word
+                    if random.random() < 0.5:
+                        word = word[:-1]
                 # Look up the replacement for the word and append it to the list of translated words
                 if word in replacements:
                     replacement_options = replacements[word]
