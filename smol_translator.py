@@ -42,7 +42,7 @@ replacements = defaultdict(lambda: [], {
     "something": ["smthn"],
     "thing": ["ting"],
     "personally": ["pawsonally"],
-    "chocolate": ["choklet"],
+    "chocolate": ["choklet","choccy"],
     "bubble": ["booble"],
     "those": ["dose"],
     "these": ["deez"],
@@ -79,7 +79,7 @@ replacements = defaultdict(lambda: [], {
     "cute": ["kewt","cute"],
     "way": ["wei","way"],
     "please": ["pls","bls"],
-    
+    "pizza": ["pidser"]
     
     
 })
